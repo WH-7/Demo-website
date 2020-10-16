@@ -5,8 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website</title>
     <link rel="stylesheet" href="./CSS/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <nav id="nav">
+        <div class="nav-closed">
+          <h3 class="logo">Logo</h3>
+
+          <ul class="nav-links">
+            <li><a class="nav-btn" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Design</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-open">
+          <div class="section-nav">
+            <h3>sections</h3>
+            <ul>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Cards</a></li>
+            </ul>
+          </div>
+          <div class="page-images">
+            <a href="#"><img src="./images/nav-2.jpg" alt="" /></a>
+            <a href="#">
+              <img src="./images/nav-3.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <img class="banner" src="./images/banner-1.jpg" alt="" />
+    </header>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"
+      integrity="sha512-/8phkpsAzxsbuX18zNkQ2gCq4Q5JsWoPo1jHLDeZorPUHRtx9YJxpdk+os05oDhPJVCNzA2/NMl4rmJyQ+6Fvg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"
+      integrity="sha512-ht40uOoiTef4nKq0THVzjIGh3VS108J577LVVgNXnQLXza3doXjoM3owin2vd+Hm6w88k12RIrePIVY2WNzz6Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"
+      integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew=="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./JS/app.js"></script>
   </body>
 </html>
