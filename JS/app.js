@@ -15,7 +15,7 @@ tl.to('.banner', 1, {
 
 })
 .to('nav', 1, {
- height: '100%',
+ height: '100vh',
  ease: Power2.easeOut,
 }, '-=0.5')
 
@@ -49,3 +49,12 @@ navBtn.addEventListener('click', () => {
  }
  toggleTween(tl)
 })
+
+
+
+
+
+const section = document.querySelectorAll('#section path');
+for (let i = 0; i < section.length; i++){
+console.log(`letter${i} : ${section[i].getTotalLength()}`)
+}
