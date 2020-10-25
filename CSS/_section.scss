@@ -1,5 +1,5 @@
 #sections {
-  background: $mainWhite;
+  background: $mainBlack;
   position: relative;
 
   &:hover #section {
@@ -89,7 +89,7 @@
     fill: transparent;
   }
   to {
-    fill: $mainBlack;
+    fill: $mainWhite;
   }
 }
 
@@ -107,6 +107,10 @@
       color: $lightBck;
       text-transform: uppercase;
       padding-bottom: 0.5rem;
+    }
+    p {
+      color: $mainWhite;
+      padding: 1rem;
     }
   }
 }

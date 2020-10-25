@@ -15,7 +15,7 @@ tl.to('.banner', 1, {
 
 })
 .to('nav', 1, {
- height: '100vh',
+ height: '100%',
  ease: Power2.easeOut,
 }, '-=0.5')
 
