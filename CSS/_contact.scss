@@ -1,0 +1,167 @@
+#contact {
+  @extend #about-me;
+}
+.form-container {
+  margin-left: 1rem;
+}
+// form-1 (name)
+
+.form-1 {
+  width: 50%;
+  height: 80px;
+  position: relative;
+  input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 40px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // overwrite and click through the label
+    pointer-events: none;
+    border-bottom: 1px solid $lightBck;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      border-bottom: 3px solid $lightBck;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: transform 0.3s ease;
+      // transition: all 0.3 ease;
+    }
+  }
+}
+
+.form-1 input:focus + .label-name .content-name,
+.form-1 input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-weight: bold;
+  color: $lightBck;
+}
+.form-1 input:focus + .label-name::after,
+.form-1 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+// form-2 (email)
+
+.form-2 {
+  @extend .form-1;
+}
+form-2 input:focus + .label-name .content-name,
+.form-2 input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-weight: bold;
+  color: $lightBck;
+}
+.form-2 input:focus + .label-name::after,
+.form-2 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+// form-3 (message)
+
+.form-3 {
+  @extend .form-1;
+  height: 150px;
+  textarea {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 45px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+  }
+}
+.form-3 textarea:focus + .label-name .content-name,
+.form-3 textarea:valid + .label-name .content-name {
+  transform: translateY(-350%);
+  font-weight: bold;
+  color: $lightBck;
+}
+.form-3 textarea:focus + .label-name::after,
+.form-3 textarea:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.submit-btn {
+  margin: 2rem 0;
+  padding: 0.4rem 1.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+  background: transparent;
+  color: $lightBck;
+  border: 1px solid $lightBck;
+  letter-spacing: 0.3rem;
+  transition: $mainTransition;
+  cursor: pointer;
+  &:hover {
+    background: $lightBck;
+    color: $mainBlack;
+    border-color: $lightBck;
+  }
+}
+
+.cred-container {
+  margin-left: 1rem;
+}
+.cred-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.cred-links {
+  list-style: none;
+
+  li {
+    margin-bottom: 1rem;
+    a {
+      text-decoration: none;
+      color: $lightBck;
+      svg {
+        fill: $lightBck;
+        margin-right: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      &:hover svg {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 792px) {
+  .contact-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+  }
+  .cred-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+}

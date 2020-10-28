@@ -48,3 +48,16 @@ section:hover .section-underline {
   border: 3px solid rgb(255, 57, 57);
   background: rgb(255, 57, 57);
 }
+//  title (about page)
+.title-about {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.title-about-underline {
+  color: $lightBck;
+  width: 100%;
+  border: 2px solid $lightBck;
+  margin-bottom: 1rem;
+}

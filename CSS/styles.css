@@ -52,6 +52,20 @@ section:hover .section-underline {
   background: #ff3939;
 }
 
+.title-about {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.title-about-underline {
+  color: #2dc2bd;
+  width: 100%;
+  border: 2px solid #2dc2bd;
+  margin-bottom: 1rem;
+}
+
 header {
   z-index: 1;
   height: 100vh;
@@ -789,5 +803,270 @@ footer {
 
 .footer-bottom ul li a:hover {
   color: #fbfbff;
+}
+
+#about-me, #contact {
+  background: #04080f;
+  color: #d8cbc7;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#about-me p, #contact p {
+  font-size: 1rem;
+}
+
+.about-me-center {
+  padding-top: 1.5rem;
+}
+
+.about-img-container {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.about-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+}
+
+.about-text-1-container {
+  max-width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.about-text-2-container {
+  max-width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-me-center {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me-center p {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.form-container {
+  margin-left: 1rem;
+}
+
+.form-1, .form-2, .form-3 {
+  width: 50%;
+  height: 80px;
+  position: relative;
+}
+
+.form-1 input, .form-2 input, .form-3 input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 40px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.form-1 label, .form-2 label, .form-3 label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #2dc2bd;
+  overflow: hidden;
+}
+
+.form-1 label::after, .form-2 label::after, .form-3 label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #2dc2bd;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.form-1 label .content-name, .form-2 label .content-name, .form-3 label .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.form-1 input:focus + .label-name .content-name, .form-2 input:focus + .label-name .content-name, .form-3 input:focus + .label-name .content-name,
+.form-1 input:valid + .label-name .content-name,
+.form-2 input:valid + .label-name .content-name,
+.form-3 input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-weight: bold;
+  color: #2dc2bd;
+}
+
+.form-1 input:focus + .label-name::after, .form-2 input:focus + .label-name::after, .form-3 input:focus + .label-name::after,
+.form-1 input:valid + .label-name::after,
+.form-2 input:valid + .label-name::after,
+.form-3 input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+form-2 input:focus + .label-name .content-name,
+.form-2 input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-weight: bold;
+  color: #2dc2bd;
+}
+
+.form-2 input:focus + .label-name::after,
+.form-2 input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.form-3 {
+  height: 150px;
+}
+
+.form-3 textarea {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 45px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+
+.form-3 textarea:focus + .label-name .content-name,
+.form-3 textarea:valid + .label-name .content-name {
+  -webkit-transform: translateY(-350%);
+          transform: translateY(-350%);
+  font-weight: bold;
+  color: #2dc2bd;
+}
+
+.form-3 textarea:focus + .label-name::after,
+.form-3 textarea:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.submit-btn {
+  margin: 2rem 0;
+  padding: 0.4rem 1.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+  background: transparent;
+  color: #2dc2bd;
+  border: 1px solid #2dc2bd;
+  letter-spacing: 0.3rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #2dc2bd;
+  color: #04080f;
+  border-color: #2dc2bd;
+}
+
+.cred-container {
+  margin-left: 1rem;
+}
+
+.cred-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cred-links {
+  list-style: none;
+}
+
+.cred-links li {
+  margin-bottom: 1rem;
+}
+
+.cred-links li a {
+  text-decoration: none;
+  color: #2dc2bd;
+}
+
+.cred-links li a svg {
+  fill: #2dc2bd;
+  margin-right: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cred-links li a:hover svg {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 792px) {
+  .contact-center {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+  }
+  .cred-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cred-container li {
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
