@@ -1,0 +1,41 @@
+#details {
+  padding: 2rem 0;
+  background: $darkBck;
+  color: $grey;
+}
+.details-design-container {
+  max-width: 90%;
+  margin-left: 1rem;
+  h3 {
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    letter-spacing: 0.07rem;
+  }
+}
+.details-pricing-container {
+  margin-left: 1rem;
+  max-width: 90%;
+  h3 {
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin-left: 1.3rem;
+    list-style: lower-roman;
+    letter-spacing: 0.07rem;
+    li {
+      margin-bottom: 1rem;
+      h5 {
+        display: inline-block;
+      }
+      p {
+        margin-left: 0.5rem;
+        display: inline-block;
+      }
+    }
+  }
+}

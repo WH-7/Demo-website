@@ -56,8 +56,29 @@ section:hover .section-underline {
   text-align: center;
 }
 .title-about-underline {
-  color: $lightBck;
+  background: linear-gradient(
+      to right,
+      rgba(255, 1, 1, 0.945),
+      rgba(252, 237, 30, 0.863),
+      rgba(24, 132, 221, 0.678)
+    ),
+    $lightBck;
+  height: 3px;
   width: 100%;
-  border: 2px solid $lightBck;
+
   margin-bottom: 1rem;
+}
+//  title (about design)
+.title-design {
+  @extend .title-about;
+}
+.title-design-underline {
+  @extend .title-about-underline;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.945),
+      rgba(247, 231, 8, 0.788),
+      rgba(0, 0, 0, 0.678)
+    ),
+    $lightBck;
 }
