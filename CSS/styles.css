@@ -1080,8 +1080,8 @@ form-2 input:focus + .label-name .content-name,
 
 #details {
   padding: 2rem 0;
-  background: #176087;
-  color: #d8cbc7;
+  background: #fbfbff;
+  color: #04080f;
 }
 
 .details-design-container, .figma-text-container {
@@ -1131,8 +1131,8 @@ form-2 input:focus + .label-name .content-name,
 
 #figma {
   padding-bottom: 2rem;
-  background: #176087;
-  color: #d8cbc7;
+  background: #04080f;
+  color: #fbfbff;
 }
 
 .figma-text-container {
