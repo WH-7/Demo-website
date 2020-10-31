@@ -56,3 +56,18 @@ navBtn.addEventListener("click", () => {
 // for (let i = 0; i < section.length; i++){
 // console.log(`letter${i} : ${section[i].getTotalLength()}`)
 // }
+
+// scroll animation
+
+const runAnimation = () => {
+  [
+    ".details-design-container h3",
+    ".details-design-container p",
+    ".details-pricing-container h3",
+    ".details-pricing-container ul",
+  ].forEach((cur) => {
+    document.querySelector(cur).style.animationPlayState = "running";
+  });
+};
+
+window.addEventListener("scroll", runAnimation);

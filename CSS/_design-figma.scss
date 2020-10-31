@@ -1,11 +1,14 @@
 #figma {
   padding-bottom: 2rem;
-  background: $mainBlack;
-  color: $mainWhite;
+  background: linear-gradient(to bottom, $lightBck, $darkBck);
+  color: $mainBlack;
 }
 
 .figma-text-container {
   @extend .details-design-container;
+  p {
+    opacity: 1;
+  }
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }

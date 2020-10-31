@@ -1,3 +1,11 @@
+#services {
+  background: linear-gradient(to top, $mainWhite, $mainBlack);
+  padding: 1rem 0;
+  color: $mainWhite;
+  .section-title {
+    color: $mainWhite;
+  }
+}
 .services-center {
   text-align: center;
   max-width: 90wv;

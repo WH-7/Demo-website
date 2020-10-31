@@ -1,3 +1,7 @@
+#info {
+  background: linear-gradient(to bottom, $lightBck, $mainBlack);
+  padding: 1rem 0;
+}
 .info-subtitle {
   margin: 1rem;
   color: $mainBlack;
@@ -17,4 +21,7 @@
       }
     }
   }
+}
+.info-2 {
+  color: $grey;
 }
